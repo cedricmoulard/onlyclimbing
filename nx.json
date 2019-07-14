@@ -15,10 +15,10 @@
       "tags": []
     },
     "climbing-areas-interface": {
-      "tags": [
-        "shared",
-        "climbing-areas"
-      ]
+      "tags": ["shared", "climbing-areas"]
+    },
+    "climbing-areas-state": {
+      "tags": ["shared", "climbing-areas"]
     }
   }
 }

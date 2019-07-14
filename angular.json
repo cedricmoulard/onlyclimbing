@@ -129,13 +129,37 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/climbing-areas/interface/tsconfig.lib.json"
-            ],
+            "tsConfig": ["libs/climbing-areas/interface/tsconfig.lib.json"],
             "exclude": [
               "**/node_modules/**",
               "!libs/climbing-areas/interface/**"
             ]
+          }
+        }
+      }
+    },
+    "climbing-areas-state": {
+      "root": "libs/climbing-areas/state",
+      "sourceRoot": "libs/climbing-areas/state/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/climbing-areas/state/tsconfig.lib.json",
+              "libs/climbing-areas/state/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/climbing-areas/state/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/climbing-areas/state/jest.config.js",
+            "tsConfig": "libs/climbing-areas/state/tsconfig.spec.json",
+            "setupFile": "libs/climbing-areas/state/src/test-setup.ts"
           }
         }
       }

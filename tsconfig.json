@@ -18,7 +18,8 @@
     "paths": {
       "@oc/climbing-areas/interface": [
         "libs/climbing-areas/interface/src/index.ts"
-      ]
+      ],
+      "@oc/climbing-areas/state": ["libs/climbing-areas/state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
