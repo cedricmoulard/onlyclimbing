@@ -9,10 +9,16 @@
   },
   "projects": {
     "onlyclimbing-e2e": {
-      "tags": []
+      "tags": ["front"]
     },
     "onlyclimbing": {
       "tags": []
+    },
+    "climbing-areas-interface": {
+      "tags": [
+        "shared",
+        "climbing-areas"
+      ]
     }
   }
 }

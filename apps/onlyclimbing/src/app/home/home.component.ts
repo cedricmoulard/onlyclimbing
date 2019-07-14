@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'onlyclimbing-home',
+  selector: 'oc-home',
   template: `
     <p>
       home works!

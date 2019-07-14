@@ -119,6 +119,26 @@
           }
         }
       }
+    },
+    "climbing-areas-interface": {
+      "root": "libs/climbing-areas/interface",
+      "sourceRoot": "libs/climbing-areas/interface/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/climbing-areas/interface/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/climbing-areas/interface/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
