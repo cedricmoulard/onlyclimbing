@@ -1,4 +1,7 @@
-import { CLIMBING_AREAS_FEATURE_KEY, ClimbingAreasPartialState } from './climbing-areas.reducer';
+import {
+  CLIMBING_AREAS_FEATURE_KEY,
+  ClimbingAreasPartialState
+} from './climbing-areas.reducer';
 import { climbingAreasQuery } from './climbing-areas.selectors';
 import { ClimbingArea } from '@oc/climbing-areas/interface';
 
@@ -57,16 +60,14 @@ describe('ClimbingAreas Selectors', () => {
         ...storeState[CLIMBING_AREAS_FEATURE_KEY],
         selectedId: 'toto'
       }
-
     } as ClimbingAreasPartialState);
 
     expect(result).toBe(undefined);
   });
 
-  test('getLoaded() should return the current \'loaded\' status', () => {
+  test("getLoaded() should return the current 'loaded' status", () => {
     const result = climbingAreasQuery.getLoaded(storeState);
 
     expect(result).toBe(true);
   });
-
 });

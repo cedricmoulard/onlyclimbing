@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'oc-root',
@@ -6,7 +6,8 @@ import {Component} from '@angular/core';
     <div style="text-align:center">
       <h1>Welcome to {{ title }}!</h1>
     </div>
-    <router-outlet></router-outlet>`,
+    <router-outlet></router-outlet>
+  `,
   styles: []
 })
 export class AppComponent {

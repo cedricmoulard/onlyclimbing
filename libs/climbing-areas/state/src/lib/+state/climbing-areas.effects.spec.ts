@@ -13,10 +13,7 @@ describe('ClimbingAreasEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        ClimbingAreasEffects,
-        provideMockActions(() => actions)
-      ]
+      providers: [ClimbingAreasEffects, provideMockActions(() => actions)]
     });
 
     effects = TestBed.get(ClimbingAreasEffects);
@@ -26,7 +23,9 @@ describe('ClimbingAreasEffects', () => {
     test('should work', () => {
       actions = hot('-a-|', { a: ClimbingAreasActions.loadClimbingAreas() });
       expect(effects.loadClimbingAreas$).toBeObservable(
-        hot('-a-|', { a: ClimbingAreasActions.climbingAreasLoaded({ climbingAreas: [] }) })
+        hot('-a-|', {
+          a: ClimbingAreasActions.climbingAreasLoaded({ climbingAreas: [] })
+        })
       );
     });
   });

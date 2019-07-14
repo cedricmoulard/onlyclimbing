@@ -12,7 +12,6 @@ export const CLIMBING_AREAS_FEATURE_KEY = 'climbingAreas';
  *  Note: replace if already defined in another module
  */
 
-
 export interface ClimbingAreasState {
   list: ClimbingArea[]; // list of ClimbingAreas; analogous to a sql normalized table
   selectedId?: string | number; // which ClimbingAreas record has been selected

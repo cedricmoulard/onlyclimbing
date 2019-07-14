@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { CLIMBING_AREAS_FEATURE_KEY, reducer } from './+state/climbing-areas.reducer';
+import {
+  CLIMBING_AREAS_FEATURE_KEY,
+  reducer
+} from './+state/climbing-areas.reducer';
 import { ClimbingAreasEffects } from './+state/climbing-areas.effects';
 
 @NgModule({
@@ -13,5 +16,4 @@ import { ClimbingAreasEffects } from './+state/climbing-areas.effects';
     EffectsModule.forFeature([ClimbingAreasEffects])
   ]
 })
-export class ClimbingAreasStateModule {
-}
+export class ClimbingAreasStateModule {}

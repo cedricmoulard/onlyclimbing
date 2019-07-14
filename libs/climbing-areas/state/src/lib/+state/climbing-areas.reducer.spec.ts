@@ -24,11 +24,10 @@ describe('ClimbingAreas Reducer', () => {
         createClimbingAreas('1', 'AREA-1'),
         createClimbingAreas('2', 'AREA-2')
       ];
-      const action = ClimbingAreasActions.climbingAreasLoaded({ climbingAreas });
-      const result: ClimbingAreasState = reducer(
-        initialState,
-        action
-      );
+      const action = ClimbingAreasActions.climbingAreasLoaded({
+        climbingAreas
+      });
+      const result: ClimbingAreasState = reducer(initialState, action);
       const selId: string = getClimbingAreasId(result.list[1]);
 
       expect(result.loaded).toBe(true);
