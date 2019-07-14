@@ -1,0 +1,141 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "onlyclimbing": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/workspace:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/onlyclimbing",
+      "sourceRoot": "apps/onlyclimbing/src",
+      "prefix": "onlyclimbing",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/onlyclimbing",
+            "index": "apps/onlyclimbing/src/index.html",
+            "main": "apps/onlyclimbing/src/main.ts",
+            "polyfills": "apps/onlyclimbing/src/polyfills.ts",
+            "tsConfig": "apps/onlyclimbing/tsconfig.app.json",
+            "assets": [
+              "apps/onlyclimbing/src/favicon.ico",
+              "apps/onlyclimbing/src/assets"
+            ],
+            "styles": ["apps/onlyclimbing/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/onlyclimbing/src/environments/environment.ts",
+                  "with": "apps/onlyclimbing/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "onlyclimbing:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "onlyclimbing:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "onlyclimbing:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/onlyclimbing/tsconfig.app.json",
+              "apps/onlyclimbing/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/onlyclimbing/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/onlyclimbing/jest.config.js",
+            "tsConfig": "apps/onlyclimbing/tsconfig.spec.json",
+            "setupFile": "apps/onlyclimbing/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "onlyclimbing-e2e": {
+      "root": "apps/onlyclimbing-e2e",
+      "sourceRoot": "apps/onlyclimbing-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/onlyclimbing-e2e/cypress.json",
+            "tsConfig": "apps/onlyclimbing-e2e/tsconfig.e2e.json",
+            "devServerTarget": "onlyclimbing:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "onlyclimbing:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/onlyclimbing-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**", "!apps/onlyclimbing-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "onlyclimbing"
+}
