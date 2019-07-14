@@ -56,6 +56,22 @@
         "allow": [],
         "depConstraints": [
           {
+            "sourceTag": "scope:front",
+            "onlyDependOnLibsWithTags": [
+              "scope:interface",
+              "scope:state",
+              "scope:ui"
+            ]
+          },
+          {
+            "sourceTag": "scope:state",
+            "onlyDependOnLibsWithTags": ["scope:interface"]
+          },
+          {
+            "sourceTag": "scope:ui",
+            "onlyDependOnLibsWithTags": ["scope:interface"]
+          },
+          {
             "sourceTag": "*",
             "onlyDependOnLibsWithTags": ["*"]
           }
