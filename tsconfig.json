@@ -19,7 +19,8 @@
       "@oc/climbing-areas/interface": [
         "libs/climbing-areas/interface/src/index.ts"
       ],
-      "@oc/climbing-areas/state": ["libs/climbing-areas/state/src/index.ts"]
+      "@oc/climbing-areas/state": ["libs/climbing-areas/state/src/index.ts"],
+      "@oc/climbing-areas/ui": ["libs/climbing-areas/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

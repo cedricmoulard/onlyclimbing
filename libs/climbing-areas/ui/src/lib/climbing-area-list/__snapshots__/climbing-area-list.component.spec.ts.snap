@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClimbingAreaListComponent should display climbing areas name 1`] = `
+<li
+  id="1"
+>
+  Area 1
+</li>
+`;

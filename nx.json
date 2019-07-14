@@ -20,6 +20,9 @@
     },
     "climbing-areas-state": {
       "tags": ["scope:state", "climbing-areas"]
+    },
+    "climbing-areas-ui": {
+      "tags": ["scope:ui", "climbing-areas"]
     }
   }
 }
