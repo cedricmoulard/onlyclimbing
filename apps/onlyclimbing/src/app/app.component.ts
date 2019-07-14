@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'oc-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <div style="text-align:center">
+      <h1>Welcome to {{ title }}!</h1>
+    </div>
+    <router-outlet></router-outlet>`,
+  styles: []
 })
 export class AppComponent {
   title = 'onlyclimbing';
