@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "jest-preset-angular": "^7.1.1",
-    "@angular-devkit/build-angular": "^0.801.1",
+    "@angular-devkit/build-angular": "^15.0.0",
     "@angular/cli": "8.1.1",
     "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "^8.0.0",
